@@ -4,12 +4,12 @@
 
 虽然使用 context 可以达到同样的目的，但是这会要求所有的方法增加 context 参数，如果只用来传递这个 ID，成本过高，在实际工程中很痛苦。
 
-本工具并未提供一个具体的 requestID 生成方法，可以使用类似 uuid 的算法，或 snowflake 类似的算法。
+本工具并未提供一个具体的 requestID 生成方法，可以使用类似 uuid 的算法，或类似 snowflake 的算法。
 
 ## Usage
 ```go
 import (
-    "github.com/ncfwx/x/requestid"
+	"github.com/ncfwx/x/requestid"
 )
 ```
 
@@ -18,12 +18,12 @@ import (
 以下是在一个 goroutine 中使用示例
 ```go
 go func() {
-    requestid.Set("my-request-id")
-    defer requestid.Delete()
+	requestid.Set("my-request-id")
+	defer requestid.Delete()
 
-    func() {
-        requestid.Get()
-    }()
+	func() {
+		requestid.Get()
+	}()
 }()
 ```
 

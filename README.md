@@ -9,7 +9,7 @@
 ## Usage
 ```go
 import (
-	"github.com/ncfwx/x/requestid"
+	"github.com/quanhengzhuang/requestid"
 )
 ```
 
